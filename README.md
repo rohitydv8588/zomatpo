@@ -9,7 +9,7 @@
 3. Deploy the Machine learning model via Flask that can be used to make live predictions of restaurants ratings
 ## Authors
 
-- [@Rohit Yadav]
+- [@Rohit  Yadav]
 
 
 ## Installation

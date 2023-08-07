@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Zomato Resturent Rating Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+
+<img src=
+"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXgAAACGCAMAAADgrGFJAAAAk1BMVEXiN0T////iNULhLDvhMD7hJjbhKjnhLz3gIjPhJzfgHzHgGy7gHC/voKXoYWvlTFf529386uv98PH1w8b++Pj64ePtlJrtjZPpcXnyr7P41Nb2yMv0vcDrfYTlVF775+jrgojjPUrtj5XmW2TkQ0/0vsHpbnb519nxqq7ztrrlT1rqeH/vm6DwpannYGnoaHHgCiTyRmPyAAAPCklEQVR4nO1ca3OqPBDWcAtgqyLe691erFrP//91r4AhIfuAHOmcvjPN86HTmUAMm83usxdotQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz+JdhPL+BXglnB0kj+X4PZfLMdDvlPr+OXwXb8ybzdbs+N4P8hmBsup1E7wYf/04v5NWBesBkN2zeMrZ9ezy+B7djHeVvizf7pFf0O2LtD1FbxaVjNv4D91S4ito3g/wXcJ03w/fCnl/Q7wGea4GeGTf4LMBZpgj84P72mXwF7p8m9fXJ/ek2/Au5JF/zRsMkmYLbnOjzohGHY4Y7rlTEVPtcFv6wleMb+h9yHMTtBg6Ux5lmuVcLrrtOXD6YXeE7Q2i3OL/NeP4qj1fvgY/Hp+OgG5ugmPt7fWTbzfB74nm3xwHF/hHpCwTKL+63u89vkstszxynVtPz6RDOd4lU295aL0Wl82XCqfcx3u5PRafu2d2Boz1xnsz4MY12RVx+fxdlS9fCX+nX9wLUE6OKvs+/X0/kquqLfe316Zty784S1wYIMvBzJcKdjkZIBs4LNdr7KlWf4snaR7DzPslzfuU7UsXfr86CvRuleeBkINZxdAm1Pgu60fxscrjtkAW74eR7qshSYLbm8gbW6u8txfdAvisYjgdOXNr8d7PXZ4/kxBBv0ANiyHV93czUc9nrvswzzFNn/773ecHU9wdcfPRVV7qqLW/rQ80uoiZ7t1+vx6Gn6OusJGUomwcLjSr39oMiqxfiyYJJ7xa23+eZUuJlgKvfRPVdemaKYtbE7F53zp4jGwXf4Y29xf0E3FNN4butMzneK3hcvyocwuPaHELy715/tJZA3uh/a4NCVM9vB8vXuknstISOH6DqFV9j0HRR7gtXXN3B/yq9KsVbMG+NjLPYE04JjY5/ggmyIL+gkEyEq95OeJ5k7t5eEnyAMhWciEStFpCQPbEff9AJGvLG58Wtowg2K4K1N5XP0bOUwAsEfMvmF6Pj3biG884ZmFlvKiJcswewmTafUFeR4l8kDa3/n8qk8mA+ihiYILHLB87dydU/RVygQ65LhVPAsfIH3ZvzOwSYwN3e8D8cp1ukdzNZ5JIVMHjiXuxdPOw0F71e7JxV5jBds7147lPYSKGdialhQYqJT2TprPDgQwvErTYGCKHWwbHP/ylG+qSU/XsC2WcWQ2Xd0V4Fw+ryOWxjkZxE410TwfFpyZ2LH3UnJ4NApn7UEqYW0a5gm4V38OnJvtz8bcRtgB0rxnP2Sc1/fE6yF/tjPZOzKapxR2Y2vTsumbuGGSJwkVvuopl0EdtlOKuhmU1vQuVD0GuWT6yxIYJcK3j3WuzoWftCmD3JyPbobAnPOeKlBjnPnUd/WJHG+VbrPEtkZtWur4qJJEEsKMuXIHGa5Muo434wgiBTWlldu4eY8KGeKUvBFsrSaTU/b7eg8B/MmmuyXGTaJYSp45tZ2eiuYDqoJBzMLgGifKDxzaq9LqLw1JkOXsIKED/5U2Fgp+Fa+kv7huPG5n+RcXG5RB5SYSGdwd73z1H0E9el1o/6E4D69vT1x5ktKXSLAjfeDEG1fFS4fKk6DtPHC1kTTne8omVHGCRVMTELQu7vcNJy27xNJicHjVp5WwsqwTH0lNDS90foJsepbNZOe8rhV9aunqkM4lCQuISrDte/rqVquW8+En/r3nzPVkxAd6MN6DKlvfDcZWy74ugHgJcuuoHBrEbqeG4ITGmc5LVp7GFb6xcozpVIJPp+E4NEJZU9TcpsrPOLQ+s4mRzITMIvtWYtbVvCJjuHlYVvj5eY0lgC/cMwUDRCU9i4dYuF72broKX/PfmL25qPIPBscTpwAOP4XNT3lw+cmRDMVPLuCk7M0C1iO5CKXHoxZloy2UNzw9HC9lnV3n93ufr+/7XqStwaHbXx7XGApxRAKaLJ1hSWnfBvYrDRQ+uAeY8A+1HlUru2mjEjJ8g/F8NOibj0S1KUD+ECDRmNmswJsF3ih021+0oV1Vd48oxdSM/+abkpIJ0wwSSYti99GaZyvS7BdrzSty1ck95hFljgqlhjQD4orPBC/DBunygRYAIz4h8gHAe75nAsCJLx7ybpKZLtIN6VkcJptJ8goboA7Y7aXFLiuuFJKz2b6bcISg3zNsRADgVPbyxWLbYAN/q4uNIb49YuYnbnkp9/llgO/FCU7histH7cwEbK32Z/s96iGkidllhOyr/X2fHgdDF4P5+1iZ/3RLJQoZ4N8za5wgECUNZE7A450+3uqgC3WAUxukJfPYAia3wySD6l9hJWWYVAaXF29602tWYtsdK9wtpkV7NcDIg/NSUWC5NP1x8VaYodMFSklL8To0AF8ABzQvJmMi4GlURYOcmEpz4WxsdA0WAkd3xwoqKCopIa59hpQKYKVuIemR6JCUh1wa7W/DwW/93pD6iEAuqlWOelZU1k1MJCp4CmVSEraFQ8zFGU1cIYUZ2g5p3oZ7Zx6UBUoNqyC46f6cgcEUd+i8Ryke/uKEWOMDH8o5A5Qnvi6a8hQy/WijMWbMKvASOUFWRYu6sbceZ02IOejEBUgyaqCRUryHf1lqOYTbZQdtymfUhOjwE8mJxmVfvIDjDIWkqIBnpT7Set+0ktA0njyY8WogGrBSjnvIAIXmeRGQKFM3FWdPsggqyYO7EsiQxRY5bchNimbSCi1jW822d7UL1gqbJKYpmJGnQYcBVMEnGvUnE5aqDCxK4QXwEuqGw4sZGJdPXqQerlLQ2xSceZEQ2+CsPd1zUwCYS6ALfxSFYvZZHyqBraU82gk6xF4S+ConovhOd3xWN1wQFCSdZOmJNVDlmzWTRBUQ7MIn3nAbfRmg5eX+axHn0NMSEPPYsMqoPmqKQJRjCy9Pwp7D+R+1MroNI7sqxsOTGASqwOX1JUpdRqxyMgAGKnMDJGsSXRehgG/Rq6cB6GlsfWVEDz11VEh/gEZQDWjgBK5TV9qsFF+fKzvJq0uF1IVIBeWfJ6BeizFMILNku3qwGmkCQpdQPHYUdOU+n7ldpqSlmKqBcSHW6tyuEFaOAVjwFWd9MQbKEaqCwfsJakWgUYiJaVHzWYseQTV0Mw0aCnS4d4tcDrdqeSUkZrKoqUA3kjtFgUtd3EzNslQQvJM3QYV/Eq5qMRcl7WRZb/MaFu7jCWpM++njRpFjY5sTet0EpqbA3okPwqWAqi0ampAqmbWyLfChOQB8CSfGA3VuQKylZh4wFvk+QVmUzkOdMZ0UNuPnX7aA02+eVKYkpZ1gbUBG684V1T0HDX5CgJMSM4RPwWxv3y1A8VJScIAHARZmwc5AYXAYQ3VIuG53sJIxCcS18BXPxc2rTpV44CKZJNMDQtADmvmoBkBP5HOBawrbZcAvEV+OwB0GUklZC0ymMQ7mu1a601FoX5OBI0HlqQoOOaRC2QuioHWh0avJgcgIdlzrORlMi9B8mqQewWDRD1Pg7A9nSbVbMpb1M4Y6q+kEgINTbZMk5/+BQh6lzgSYJeV3GryX0hlm+dqUOJ20oDTdEA9OX6bTCbHKxaL9Xo83o5Gp/P0Ki3g9SNxNIC9WqXmirokxX0CvyA5fkn2XNt+7bSzju6I+uLnwNnLBW/z5F9QUT6JbjhA4lcNXCtKSEKk6S569ttP6WOxEOhDmgdhFtEixX1SKx7ZFWxyCGyX9pZqQE5lbg9AzJA6Zma74WX+6sNuzDjLEnobEOg0aJ0sa0KnSBkvqn1tQ991XNBUk5nHitdwEh5LBpXIgMY76SI0Oj0qMELQ2D4op/Htmc+dwF8+rTKCghp4V/vAdTtfQO7DxxNkpb0VFCkFhI2fw/NoilJWmd8FzyKDEpAcUUIaTrLnKbnTFhEpPIAFQJFyro4KMtH8dZYtPrHXzEeVldfTCTZ6Ph61uuWd0gRZrF77XYC8xmRRWybdJ+AZZ6nA1A6l5SDdAs143rzRQQ1qedQAWjcUpL6ifgfv9QEftvB/I8YbEwnvd37eINqAAG/pVlhxhR0yTgZTikEisv5b6LiWy501zBXnxbtKwWeh4F+IpP94f0FQ9+2tdm56UU8PhvB51LBGksOBwEDGodQOxVn/OnXx/cNoey7r+84tAjI1OW6JdRTEY9T79AQEYK2lEBEctbsYa+FAqb1YydAUiELuCiWvt2jmzmuKujrlRL/yvqznrdabUikWDfLBfyN4YShrLuxJ2D/AW5Rwj5MVKN3vtNB4SzOC/kYFr5pti/MQqPKFXkGOUGIA4NQkO1bS0giRWwC/xqtEUu6o2qawSWo0hkpuhLDJW0qKBRUa0/uj6XWc22LYOyUgglDWqVPMfWr0jmunxi8IyC6HkpeCVWyVtj5KamTRBlBN9TgQOySSaxUq33N1Fypblirfb8wNEuyQ1DBulg127v5ADuUtK1bxYliKeKKkjgDzly1CoGtBZgOZRbyDbMYpW8Lct/VclpKgqPCcSvkFVp8L1741K7Qyq3p+FWoajlW/BfXeVd0OcJ8yq8UpqZH5b2qHZPKf2ZgZjgJG1FoJhSteb1K7BbxuJd2b7Rt+ihj0hZWi8L1pFpS/ORaPCx/6AWrblskY8P7gqCKqVXafeaiG0PWBIVc0HmYYU0yL3QYVzVLaAz4k+E3p7ATb4iZbNjb08dktsixUmM9DfJRJHufxE2WTao8LC7VoKT50U4k4pAFB9YM0hXbF6uRq5QcWvuEjFZ+d5t9KZPvZ4DA9P5224/XiOHm7XPH8/Pz1df1z/fdtclysx9vT08f05V0vrzFn/0F0uTe29Bdu2f6ZQLnks6vhU2lVzD4wp6IwteVMXlapNY6j94+LkJ09eiqi+FUp51kLRIYfS8elOuzxI3UI4AEfAuOO77uua1meRx4yK4SkNRDfgZ9os57Ps+jmh+LVy7rL0bfU6KzqKEXFKJnacTafy2V3Y3Hljcu0aqNAM8g2/xy99qI4vm7X69Pbnrs4AmUe348HfeFn4/5gCx/wB8Bslweb5dflsut6HedHFoW35M49lhN0HD9Ivk5Z+THD64Wd1vIyOU4uy1bwMw9YiuyLk//Hb2F+D5p/UdPAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwOB78B85o/MLBTO30QAAAABJRU5ErkJggg=="
+         alt="zomato image", width="400", height="150", style="float:center">
+
+<style>
+body {
+  background-image: url("https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Zm9vZCUyMGZsYXRsYXl8ZW58MHx8MHx8&w=1000&q=80");
+  background-position: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+</style>
+
+
+
+ <div class="login">
+	<h1>Predict Zomato Restaurant Ratings</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Online Order" placeholder="Order Online" required="required" />
+        <input type="text" name="Book Table" placeholder="Book Table" required="required" />
+		<input type="text" name="Votes" placeholder="Votes" required="required" />
+        <input type="text" name="Location" placeholder="Location" required="required" />
+        <input type="text" name="Restaurant Type" placeholder="Restaurant Type" required="required" />
+        <input type="text" name="Cuisines" placeholder="Cuisines" required="required" />
+        <input type="text" name="Cost" placeholder="Cost" required="required" />
+        <input type="text" name="Menu Item" placeholder="Menu Item" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
